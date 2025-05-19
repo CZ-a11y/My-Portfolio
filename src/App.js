@@ -27,7 +27,7 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  const basePath = process.env.REACT_BASE_PATH || "/";
+  const basePath = process.env.REACT_BASE_PATH || "/My-Portfolio";
   return (
     <Router>
       <Preloader load={load} />

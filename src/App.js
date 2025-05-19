@@ -27,14 +27,14 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
+  const basePath = process.env.REACT_BASE_PATH || "/";
   return (
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        <Routes>
+        <Routes basename={basePath}>
           <Route path="/" element={<Home />} />
           {/* <Route path="/project" element={<Projects />} /> */}
           <Route path="/about" element={<About />} />
